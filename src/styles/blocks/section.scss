@@ -1,0 +1,27 @@
+.section {
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+
+    @include on-tablet {
+      width: 100%;
+      text-align: start;
+    }
+
+    &--white {
+      margin-bottom: 20px;
+      color: #fff;
+
+      @include on-tablet {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+.gallery {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    scroll-behavior: smooth;
+    overflow: visible;
+    scroll-snap-type: x mandatory;
+
+    display: flex;
+
+    max-width: 100%;
+
+    @include on-desktop {
+      all: unset;
+      display: block;
+    }
+  }
+
+  &__track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+    @include until-desktop {
+      gap: 16px;
+      width: 100%;
+
+      @include on-tablet {
+        gap: 20px;
+        width: 400%;
+      }
+    }
+
+    @include on-desktop {
+      display: contents;
+      width: auto !important;
+      transition: none !important;
+    }
+  }
+
+  .gallery__radio {
+    display: none;
+  }
+  /* stylelint-disable selector-max-id */
+  #photo1:checked ~ .gallery__photos .gallery__track {
+    transform: translateX(0%);
+  }
+
+  #photo2:checked ~ .gallery__photos .gallery__track {
+    transform: translateX(-100%);
+  }
+
+  #photo3:checked ~ .gallery__photos .gallery__track {
+    transform: translateX(-200%);
+  }
+
+  #photo4:checked ~ .gallery__photos .gallery__track {
+    transform: translateX(-300%);
+  }
+
+  #photo1:checked ~ .gallery__scroll label:nth-child(1),
+  #photo2:checked ~ .gallery__scroll label:nth-child(2),
+  #photo3:checked ~ .gallery__scroll label:nth-child(3),
+  #photo4:checked ~ .gallery__scroll label:nth-child(4) {
+    background-color: #1a5a4c;
+  }
+  /* stylelint-enable */
+  &__photos {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+
+    @include on-desktop {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 30px;
+    }
+  }
+
+  &__photo {
+    cursor: pointer;
+    scroll-snap-align: start;
+
+    width: 280px;
+    height: 410px;
+
+    object-fit: cover;
+    object-position: center;
+
+    @include on-tablet {
+      width: 340px;
+      height: 543px;
+    }
+
+    @include on-desktop {
+      width: 100%;
+      height: 600px;
+    }
+
+    &--small {
+      @include on-desktop {
+        height: 360px;
+      }
+    }
+  }
+}
