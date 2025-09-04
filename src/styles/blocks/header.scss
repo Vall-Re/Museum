@@ -78,7 +78,15 @@
     }
 
     @include on-desktop {
-      margin-top: 206px;
+      margin-top: 200px;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+
+    @include on-tablet {
+      margin: 0;
     }
   }
 
@@ -100,7 +108,7 @@
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    color: #000;
+    color: $main-black-color;
 
     @include on-tablet {
       font-size: 54px;

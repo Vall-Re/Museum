@@ -7,6 +7,10 @@
   background-position: center;
   background-size: contain;
 
+  transition: $effect-duration;
+
+  @include hover(transform, scale(1.1));
+
   @include on-tablet {
     height: 72px;
   }

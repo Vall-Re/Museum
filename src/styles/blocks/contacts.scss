@@ -22,7 +22,7 @@
 
   &__link {
     text-decoration: none;
-    color: #0f0e08;
+    color: $main-black-color;
     position: relative;
 
     &::after {
@@ -32,9 +32,9 @@
       display: block;
       height: 1px;
       width: 100%;
-      background-color: #0f0e08;
+      background-color: $main-black-color;
 
-      transition: transform 0.5s;
+      transition: transform $effect-duration;
       transform: scale(0);
       transform-origin: left;
     }

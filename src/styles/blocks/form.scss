@@ -26,12 +26,18 @@
     font-size: 14px;
     line-height: 100%;
     letter-spacing: 0%;
-    color: #687480;
+    color: $grey-color;
 
-    background-color: #fff;
+    background-color: $main-white-color;
 
     &:focus {
       outline: none;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 1000px $main-white-color inset;
     }
 
     @include on-tablet {
@@ -57,15 +63,15 @@
     height: 50px;
     border: none;
 
-    background-color: #f14a27;
-    background-image: url(../images/icons/icon_about-us_arrow.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 24px;
+    background-color: $accent-red-color;
 
     @include on-tablet {
       width: 70px;
       height: 70px;
     }
+
+    transition: $effect-duration;
+
+    @include hover(transform, scale(1.1));
   }
 }

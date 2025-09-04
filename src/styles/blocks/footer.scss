@@ -66,7 +66,7 @@
     height: 50px;
     margin-bottom: 20px;
     margin-left: auto;
-    border: 1px solid #1a5a4c;
+    border: 1px solid $accent-green-color;
     border-radius: 50px;
 
     @include on-tablet {
@@ -109,7 +109,7 @@
     line-height: 100%;
     letter-spacing: 0%;
 
-    color: #0f0e08;
+    color: $main-black-color;
 
     @include on-tablet {
       display: grid;

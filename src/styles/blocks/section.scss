@@ -17,7 +17,7 @@
 
     &--white {
       margin-bottom: 20px;
-      color: #fff;
+      color: $main-white-color;
 
       @include on-tablet {
         text-align: center;

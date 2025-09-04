@@ -18,7 +18,7 @@
     width: 70px;
     height: 1px;
 
-    background-color: #1a5a4c;
+    background-color: $accent-green-color;
   }
 
   &__text {
@@ -26,6 +26,6 @@
     font-weight: 700;
     line-height: 100%;
     width: 14px;
-    color: #687480;
+    color: $grey-color;
   }
 }

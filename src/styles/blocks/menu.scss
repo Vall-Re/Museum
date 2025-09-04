@@ -7,7 +7,7 @@
   display: block;
   width: 100vw;
   height: auto;
-  background-color: #1a5a4c;
+  background-color: $accent-green-color;
 
   opacity: 0;
   pointer-events: none;
@@ -18,6 +18,18 @@
     pointer-events: all;
     opacity: 1;
     transform: translateY(0);
+  }
+
+  &::after {
+    content: '';
+    position: fixed;
+    top: auto;
+    left: 0;
+
+    width: 100%;
+    height: 100vw;
+
+    background: rgba(0, 0, 0, 0.5);
   }
 
   &__content {
@@ -41,6 +53,10 @@
     display: flex;
     flex-direction: row;
     gap: 28px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
 
   &__nav {
@@ -55,6 +71,25 @@
 
     @include on-tablet {
       margin: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: $main-black-color;
+
+      transition: transform $effect-duration;
+      transform: scale(0);
+      transform-origin: left;
+    }
+
+    &:hover::after {
+      transform: scale(1);
+      outline: none;
     }
   }
 

@@ -1,10 +1,10 @@
 .graphic {
   font-weight: 400;
   line-height: 150%;
-  color: #fff;
+  color: $main-white-color;
 
   &--black-text {
-    color: black;
+    color: $main-black-color;
   }
 
   &__title {
