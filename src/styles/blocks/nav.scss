@@ -1,26 +1,27 @@
 .nav {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 
   &__block {
     display: flex;
-    flex: 1 1 50%;
     flex-direction: column;
     gap: 24px;
   }
 
   &__link {
     position: relative;
+    width: fit-content;
     text-decoration: none;
+    box-sizing: border-box;
 
     &::after {
       content: '';
       position: absolute;
-      bottom: -5px;
       display: block;
+      bottom: -5px;
       height: 1px;
       width: 100%;
-      background-color: $main-black-color;
 
       transition: transform $effect-duration;
       transform: scale(0);
@@ -29,7 +30,14 @@
 
     &:hover::after {
       transform: scale(1);
-      outline: none;
+    }
+
+    &--black {
+      color: $main-black-color;
+
+      &::after {
+        background-color: $main-black-color;
+      }
     }
 
     &--white {
@@ -38,10 +46,6 @@
       &::after {
         background-color: $main-white-color;
       }
-    }
-
-    &--black {
-      color: $main-black-color;
     }
   }
 }

@@ -24,6 +24,8 @@
     text-decoration: none;
     color: $main-black-color;
     position: relative;
+    width: fit-content;
+    white-space: nowrap;
 
     &::after {
       content: '';

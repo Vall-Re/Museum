@@ -112,13 +112,10 @@
     color: $main-black-color;
 
     @include on-tablet {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-column: 1 / -1;
+      grid-column: span 4;
     }
 
     @include on-desktop {
-      display: grid;
       grid-column: span 4;
     }
   }
