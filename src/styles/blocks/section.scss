@@ -18,10 +18,7 @@
     &--white {
       margin-bottom: 20px;
       color: $main-white-color;
-
-      @include on-tablet {
-        text-align: center;
-      }
+      text-align: center;
     }
   }
 }
