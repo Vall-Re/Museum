@@ -16,9 +16,16 @@
     }
 
     &--white {
+      margin: 0;
       margin-bottom: 20px;
       color: $main-white-color;
       text-align: center;
+
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 100%;
+      letter-spacing: 0%;
     }
   }
 }
